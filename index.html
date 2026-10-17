@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciador de Usuário</title>
+    <style>
+        * {
+           box-sizing: border-box;
+           margin: 0;
+           padding: 0;
+           font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+              background-color: #f4f6f9;
+              padding: 20px;
+              display: flex;
+              justify-content: center;
+        }
+
+        .container {
+              background-color: #ffffff;
+              padding: 30px;
+              border-radius: 8px;
+              box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+              width: 100%;
+              max-width: 500px;
+        }
+        
+        h1{
+          margin-bottom: 20px;
+          color: #333;
+          text-align: center;
+        }
+
+        .form-group {
+          margin-bottom: 15px;
+        }
+
+        label {
+          display: block;
+          margin-top: 5px;
+          color: #666;
+          font-weight: 600;
+        }
+
+        input {
+          width: 100%;
+          padding: 10px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          font-size: 14px;       
+        }
+
+        input:focus {
+          outline: none;
+          border-color: #007bff;
+        }    
+    </style>
+  </head>
+  <body>
+    <div class="container">
+         <div class="form-group">
+         </div>
+
+
+
+        <h1>Cadsatro de Usuário</h1>
+
+        <div class="form-group">
+             <label for="nome">Nome:</label>
+             <input type="text" id="nome" placeholder="Digite o nome" />
+        </div>
+
+        <div class="form-group">
+             <label for="email">E-mail:</label>
+             <input type="email" id="email" placeholder="Digite o E-mail" />
+        </div>
+    
+       <div class="form-group">
+             <label for="senha">Senha:</label>
+             <input type="password" id="senha" placeholder="Digite a Senha" />
+        </div>
+
+        <div class="button-grid">
+             <button class="btn-add" onclick="adicionarUsuario()">Adicionar</button>
+             <button class="btn-remove" onclick="removerUsuario()">Remover(por E-mail)</button>
+             <button class="btn-search" onclick="pesquisarUsuario()">Pesquisar(por E-mail)</button>
+             <button class="btn-count" onclick="contarUsuario()">contar</button>
+             <button class="btn-list" onclick="listarUsuario()">Listar/Percorrer</button>
+        </div>
+
+        <div class="output-box" id="output">O resultado  das ações aparecerá aqui...</div>
+
+        </div>
+
+        
+    </div>
+
+  </body>
+</html>
